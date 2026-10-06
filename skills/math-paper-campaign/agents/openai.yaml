@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mathematics Paper Campaign"
+  short_description: "Build or polish a whole mathematics paper, one statement at a time"
+  default_prompt: "Use $math-paper-campaign to take this paper through the right route (build from notes, or polish a checked manuscript) with independent reviews and rendered-page checks."

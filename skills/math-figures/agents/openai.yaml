@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mathematical Figures"
+  short_description: "Figures and animations that express a mathematical idea"
+  default_prompt: "Use $math-figures to design, build or review a figure or animation for this mathematical paper; make it only if it expresses or teaches a mathematical idea."

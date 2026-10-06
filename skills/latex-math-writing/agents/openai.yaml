@@ -1,0 +1,4 @@
+interface:
+  display_name: "LaTeX Mathematics Writing"
+  short_description: "Write and publication-polish mathematical LaTeX"
+  default_prompt: "Use $latex-math-writing to polish this paper while preserving every mathematical claim, following the house style unless another style is designated."

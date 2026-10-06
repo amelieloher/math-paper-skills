@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Paper"
+  short_description: "Audited interactive website from a LaTeX paper"
+  default_prompt: "Use $visual-paper to build an audited interactive visual companion website for this LaTeX paper (and its Lean formalisation, if any)."
