@@ -26,6 +26,20 @@ When the author designates a notation source for a rewrite, compare meanings, ar
 - When several statements describe one jointly chosen object (parameters, a core, a background profile), write one explicit binder at the head of the first ("Statements X to Z assert one joint choice ...") and give the quantifier structure and the order of construction. Without it, their mutual references read as a cycle.
 - Cite statements by label, never by a typed number, and settle numbering only after each statement's home is fixed.
 
+### Tight statements
+
+A statement is tight when a reader can check what it asserts without reading anything after it.
+
+- Quantifiers come first, each with the set its variable ranges over ("For every $\xi\in\mathbb R^2$ and $t'\le t$,"), then the conclusion. No trailing condition ("..., if $\xi$ is real") and no trailing quantifier ("... for every $t'\le t$").
+- A conclusion that is an inequality or identity is displayed.
+- Every constant of the statement is declared in it, with its dependence: "there exist $\gamma_0\in(0,\frac14]$ and $C<\infty$, depending only on $d$ and $c_*$, such that", or a threshold that carries its dependence in its symbol, $\Lambda_0(\alpha,s,q)$. A global paragraph on constants does not replace this.
+- Hypotheses are stated once, up front, not scattered through the items.
+- A statement never refers to an equation inside a proof, to "the order fixed in the proof", or to how it will be used. Commentary ("the constant does not depend on ..., and no ... is assumed") goes in the text after the statement, if it is needed at all.
+- Existence claims are explicit: "there exists a representation $r$ of $u$ such that $X(r)\le C\|g\|_{L^2(\mathbb T^2)}$", not "$u$ has a representation of size at most ...".
+- State the result in its natural form, not in the shape of its proof: exponential decay is $\exp(-c(t-a))$, not an iterated contraction over windows of an auxiliary length.
+- Do not state trivialities or formal pedantry as conclusions (existence of weak solutions in a regularity theorem, "has a continuous representative", conventions such as $0\cdot\infty=0$); one clause in the text suffices when they matter.
+- A statement that runs over about half a page is a signal: split it, or move the explanation out of it.
+
 Read a statement once without its proof. If its role, objects, or uniformities are unclear, revise it before drafting the proof.
 
 ## Write proofs artisanally
@@ -59,6 +73,10 @@ If the natural proof requires a stronger hypothesis or produces a weaker conclus
 - A summary of a definition or lemma (a reading key, a table of rules) is an explicit selection of its consequences, never a second definition. Keep each row's domain ("for $f$ in class $X$") and check the summary as a statement.
 - Use the actual mathematical expression when referring to an object, including the indices and arguments that identify it. An undefined shorthand such as `$\mathcal P+D$` does not identify the grid, scale, or initialisation. A declared, repeatedly useful proof-local abbreviation is different; do not introduce it just to shorten an opening.
 - When two quantities measure related effects, say what each compares, what normalisation it uses, which is fixed or evolves, and why both are needed. An additive increment, a cumulative difference, and a weighted history are not interchangeable just because one bounds another. Explain the conversion and its use: for example, separating old and new increments permits an update estimate, while summing intervening increments gives differences over a longer interval that a different comparison can estimate. Naming summation by parts alone does not explain why it helps. A simple limiting example can make the distinction memorable.
+- Never introduce a new letter for a quantity that already has a name, and never an abbreviation that hides an index: no $E\coloneqq\varepsilon_{m-1}$. Write $\varepsilon_{m-1}$. A new symbol is for a genuinely new object used repeatedly.
+- No symbol with two meanings anywhere in a document, even far apart: a fixed exponent of the paper must never also be the free parameter of a lemma. Give the lemma's parameter a fresh letter, or state the lemma for the fixed one. Avoid visually similar symbols in one formula or paragraph ($w_v$ next to $\omega_v$; a letter subscripted by its near-twin, $\mathsf k_k$).
+- Every norm shows its domain, including time: $\|g\|_{L^2(\mathbb T^2)}$, $\|u\|_{L^\infty([t_1,t_2];C^{0,s}(\mathbb T^2))}$, never $\|u(t)\|_{C^{0,s}}$ "for every $t$". Write norms with $\|\cdot\|$ and keep $|\cdot|$ for absolute values and finite-dimensional norms; write Hölder norms as $C^{0,s}$, since a reader takes $C^s$ to mean $s$ derivatives.
+- Derived exponents do not display their dependence on the fixed parameters ($\mu$, not $\mu_s$); introduce them together with the fixed parameters, each with a phrase saying what it is.
 - Name a quantity for its mathematical meaning, not the construction's nickname. Distinguish distortion of coordinates or a grid from properties of a coefficient or reference bound; do not claim coordinate invariance without checking it. Once terminology is settled, check all reader-facing occurrences, while preserving genuinely different technical uses.
 
 ### Keep objects recognisable through the argument
@@ -85,6 +103,9 @@ Assess the simultaneous meanings and conversion relationships the reader must re
 - Do not praise an argument. Show its mechanism.
 - Apply the deletion test to every sentence, display, label, title, hypothesis, and conclusion: remove it if no mathematical or expository function fails.
 - A heuristic or motivating sentence is a mathematical assertion with a scope. State the scope (values or all derivatives; which region; generic or special data; which row or term), or say only what is true. Preserving every formula in a rewrite does not make the new explanatory sentences true: they need the same mathematical check.
+- Mathematics belongs in displays, not in long paragraphs. A paragraph that carries more than two or three nontrivial inline formulas should be split, with the definitions, constraints and estimates it states displayed. Key definitions (parameter constraints, recursions, defined objects, norms) are displayed where they are introduced.
+- Before a dense lemma or proposition, give the reader a few sentences on what it does and how to think about its estimate: which term is large, which is small, and why it is needed next. Open each subsection of a technical section with one or two paragraphs on what it proves and how it fits the argument. A few sentences, never pages; and do not confuse an explanation with a name: coining a term for a step explains nothing.
+- A proof that only describes what one would do is not a proof. Either do the decisive step, displayed, or cite the exact item where it is done.
 - Stop compressing when another deletion would hide logic or make the reader reconstruct a load-bearing step.
 
 ### Ideas before technicalities
@@ -197,7 +218,7 @@ When a paper discusses a formalisation or companion implementation, state its ac
 
 ## Figures
 
-For deciding whether a figure should exist, and for designing, drawing, animating and reviewing it, use the `math-figures` skill. In short: a figure is a claim. Compute it from the formulas with a script kept in the build. Say in the caption what is plotted and what is illustrative. Check what the picture implies: a region drawn as attainable must be attainable with the stated choices, and every label must name the right object. Report any parameter changed for legibility.
+For deciding whether a figure should exist, and for designing, drawing, animating and reviewing it, use the `math-figures` skill. In short: a figure is a claim. Compute it from the formulas with a script kept in the build. Say in the caption what is plotted and what is illustrative. Check what the picture implies: a region drawn as attainable must be attainable with the stated choices, and every label must name the right object. Report any parameter changed for legibility. A caption is two to four lines saying what is drawn; the explanation belongs in the text, and every mark on the figure is explained in the caption or removed.
 
 ## Verify the finished artefact
 

@@ -18,6 +18,7 @@ Carry the campaign through successive packets until the requested paper is compl
 | a proof outline, notes, a formal development, or a draft whose proofs are not yet all written and checked | **[Route A: build](references/route-build.md)** — establish and write a correct, reviewed paper |
 | a manuscript whose statements and proofs have been checked at a named revision, to be made clear and publication-ready | **[Route B: polish](references/route-polish.md)** — Phases 0–6: freeze, reduce, cite, linearise, rewrite, introduction, final audit |
 | an old paper to be restructured around a new spine | Route A's [rewrite mapping](references/route-build.md#7-rewrite-an-existing-manuscript), then Route B once the mathematics is checked |
+| a completed formal (e.g. Lean) development to be turned into a readable paper | Route A with [A paper from a completed formalization](references/from-formalization.md): the editor's role, the detail standard, a proof map and a pilot first, claims and a pinned correspondence table |
 
 A paper built under Route A that needs substantial compression or restructuring continues into Route B from Phase 0; a paper built carefully needs only Route B's introduction phase and final audit (Phases 5 and 6). If only part of a manuscript is checked, run Route B on the checked packets and Route A on the rest, keeping the unchecked material blocked and visible.
 
