@@ -170,3 +170,30 @@ Run the [final audit](shared-controls.md#final-audit) at a named revision, with 
 - check terminology globally, including headings and statements, without blindly replacing mathematically different uses; regress preserved intermediate estimates as well as theorem surfaces; inspect fractions in context, proof-step styling, and link destinations, not merely the presence of preferred commands in the source.
 
 The manuscript is publication-ready only when it passes the [completion test](shared-controls.md#completion-test). "Compiles" is necessary but not sufficient.
+
+## Field lessons: a whole-paper readability pass (2026)
+
+From a pass over a dense 105-page research paper (tight statements, displays, openings and lead-ins, sketches
+that do their decisive step), run as one pilot section calibrated by the author, then one writer per section with
+an independent fidelity reviewer per section.
+
+- **Measure the cost on the pilot and set the cap from it.** Moving mathematics into displays and adding lead-ins
+  cost about 10% in pages; the author chose a higher cap over a lighter pass. Give each writer a per-section
+  allowance derived from the pilot, and re-measure after every integration: a later section's margin depends on
+  where the earlier ones end.
+- **Apply an approved global notation change once, by script, before the writers start**, so that all of them work
+  on one notation; then grep the output for malformed results. A substitution `s^\circ_m -> \mathscr S_p(m)` turned
+  the old `s^\circ_m(p)` into `\mathscr S_p(m)(p)` and missed bare `s^\circ`; section writers found both.
+- **Shared symbols stay put during the section pass.** Writers propose renamings of symbols used by other sections
+  in their change lists; a whole-paper notation audit at the end decides them together.
+- **The slips a fidelity reviewer found in every section** (two to eight per section, none mathematical): a size
+  stated two-sided where only an upper bound is proved; a quantifier re-bound inside a statement; a quantification
+  over the law or the data dropped while tightening; a heuristic true only in a weaker sense; a wrong description of
+  an auxiliary object in a proof sketch; a remark that another section cites moved away. Give the list to every
+  reviewer, and have the writer of the section apply the findings, so that page counts stay in one hand.
+- **Coauthors' standing rules are binding inputs.** Read them first (here: a notation ledger and proof-writing
+  instructions), separate the approved decisions from the protocol of the coauthor's own passes, and say in the
+  brief which of the two applies to this pass.
+- **Formal statements as a check, not a constraint.** Where the paper is paired with a formalization, the reviewer
+  of the main statements compares them with the sealed formal statements, and the correspondence table is re-pinned
+  after the pass.
