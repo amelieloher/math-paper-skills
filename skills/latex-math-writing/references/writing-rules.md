@@ -87,6 +87,7 @@ Source-format checks apply when the selected convention requires them; mathemati
 9. Check changed terminology in context, including the abstract, headings, statements, and proofs. Keep mathematical distinctions intact (a dual object need not be an adjoint operator). Keep stable labels even when their spelling differs from a new reader-facing name.
 10. For substantive exposition, apply [the comprehension test](artisan-writing.md#test-comprehension-from-the-readers-text) at the task's scope, and check new explanatory sentences and table entries for truth and scope, not only the formulas.
 11. After a scripted edit, scan the sources for control bytes; after removing or renaming a label, check the references in every document that cites it (see [Verify the finished artefact](artisan-writing.md#verify-the-finished-artefact)).
+12. No word from the [banned word list](banned-words.md) in reader-facing text: run its check on the changed files and judge every hit.
 
 ## 6. Uncertainty and placeholders
 

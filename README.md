@@ -16,6 +16,7 @@ Agent skills for writing research-level mathematics in LaTeX, for making figures
 - `writing-rules.md`: priorities, hard rules, and checklists (read first);
 - `artisan-writing.md`: the detailed guidance on statements, proofs, prose, notation, and typesetting;
 - `house-style.md`: the default look and explanatory style of a polished paper, with a starting preamble.
+- `banned-words.md`: words that must not appear in a mathematics paper, with a check command.
 
 `math-paper-campaign` controls the process around it for a whole paper:
 

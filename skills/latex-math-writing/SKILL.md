@@ -51,7 +51,7 @@ For a whole-paper rewrite or style study, read the entire current manuscript, in
 - Give every major result distinct motivation before it and a useful plain interpretation afterwards. Do not paraphrase its display merely to repeat it.
 - Distinguish the final objective from preparatory errors, and improvement from preservation or controlled growth. Account for the cost of failed steps rather than calling them free progress.
 - When reorganising a proposition, group the conclusions by use while keeping necessary labelled intermediate estimates in the proof. Check every old conclusion and downstream use.
-- Use simple verbs and exact mathematical nouns. Remove development nicknames, praise, slogans, and ornate transitions.
+- Use simple verbs and exact mathematical nouns. Remove development nicknames, praise, slogans, and ornate transitions. Never use a word on the [banned word list](references/banned-words.md).
 - Stop when the assertion is proved.
 
 ## Whole-paper rewrites
